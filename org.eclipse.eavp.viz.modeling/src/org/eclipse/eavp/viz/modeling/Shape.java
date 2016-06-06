@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlTransient;
+
+import org.eclipse.eavp.sTL.Triangle;
 import org.eclipse.eavp.viz.datastructures.VizObject.IManagedUpdateableListener;
 import org.eclipse.eavp.viz.datastructures.VizObject.SubscriptionType;
 import org.eclipse.eavp.viz.modeling.base.BasicController;
@@ -34,6 +37,9 @@ import org.eclipse.eavp.viz.modeling.properties.MeshType;
  *
  */
 public class Shape extends BasicMesh {
+	
+	@XmlTransient
+	protected ArrayList<Triangle> triangles;
 
 	/**
 	 * The default constructor.
@@ -171,6 +177,22 @@ public class Shape extends BasicMesh {
 				MeshCategory.CHILDREN)) {
 			((ShapeController) child).setParent(controller);
 		}
+	}
+	
+	/**
+	 * Gets the triangle representation of this shape
+	 * @return
+	 */
+	public ArrayList<Triangle> getTriangles() {
+		return triangles;
+	}
+	
+	/**
+	 * Sets the triangle representation of this shape
+	 * @param triangles
+	 */
+	public void setTriangles(ArrayList<Triangle> triangles) {
+		this.triangles = triangles;
 	}
 
 	/*

@@ -71,5 +71,11 @@ public enum ShapeType {
 	 * </p>
 	 * 
 	 */
-	Tube
+	Tube,
+	/**
+	 * <p>
+	 * A complex shape type, composed of triangular faces to form a mesh
+	 * </p>
+	 */
+	ComplexTriangular
 }

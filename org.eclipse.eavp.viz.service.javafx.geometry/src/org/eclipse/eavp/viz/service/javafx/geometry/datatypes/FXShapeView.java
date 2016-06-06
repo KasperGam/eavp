@@ -10,6 +10,9 @@
  *******************************************************************************/
 package org.eclipse.eavp.viz.service.javafx.geometry.datatypes;
 
+import java.util.ArrayList;
+
+import org.eclipse.eavp.sTL.Triangle;
 import org.eclipse.eavp.viz.datastructures.VizObject.IManagedUpdateable;
 import org.eclipse.eavp.viz.datastructures.VizObject.SubscriptionType;
 import org.eclipse.eavp.viz.modeling.ShapeController;
@@ -270,6 +273,49 @@ public class FXShapeView extends BasicView implements IWireframeView {
 				// If a material is specified, set it
 				shape.setMaterial(customMaterial);
 			}
+			break;
+		case ComplexTriangular:
+			
+			prevShape = shape;
+			
+			TriangleMesh mesh = new TriangleMesh();
+			mesh.getTexCoords().addAll(0,0);
+			
+			Shape complexModel = (Shape)model;
+			ArrayList<Triangle> triangles = complexModel.getTriangles();
+			int curPointIndex = 0;
+			for(Triangle tri: triangles) {
+				mesh.getPoints().addAll(
+						(float)tri.getVerticies().getV1().getX(), 
+						(float)tri.getVerticies().getV1().getY(), 
+						(float)tri.getVerticies().getV1().getZ(), 
+						(float)tri.getVerticies().getV2().getX(), 
+						(float)tri.getVerticies().getV2().getY(), 
+						(float)tri.getVerticies().getV2().getZ(), 
+						(float)tri.getVerticies().getV3().getX(), 
+						(float)tri.getVerticies().getV3().getY(), 
+						(float)tri.getVerticies().getV3().getZ());
+				mesh.getFaces().addAll(curPointIndex, 0, 
+						curPointIndex+1, 0,
+						curPointIndex+2, 0);
+				curPointIndex+=3;
+			}
+			
+			shape = new MeshView(mesh);
+			
+			// If a material is not specified, create a new one
+			if (customMaterial == null) {
+
+				if (defaultMaterial == null) {
+					defaultMaterial = new PhongMaterial(Color.BLUE);
+					defaultMaterial.setSpecularColor(Color.WHITE);
+				}
+				shape.setMaterial(defaultMaterial);
+			} else {
+				// If a material is specified, set it
+				shape.setMaterial(customMaterial);
+			}
+			
 			break;
 		default:
 			return;

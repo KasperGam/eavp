@@ -363,6 +363,7 @@ public class BasicMesh
 		return properties;
 	}
 
+
 	/*
 	 * (non-Javadoc)
 	 * 
