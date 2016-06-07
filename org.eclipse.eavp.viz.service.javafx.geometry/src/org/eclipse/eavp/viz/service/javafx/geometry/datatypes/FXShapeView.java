@@ -276,13 +276,20 @@ public class FXShapeView extends BasicView implements IWireframeView {
 			break;
 		case ComplexTriangular:
 			
+			// Store the previous shape
 			prevShape = shape;
 			
+			// Create a new triangle mesh with no texture
 			TriangleMesh mesh = new TriangleMesh();
 			mesh.getTexCoords().addAll(0,0);
 			
+			// Get the underlying shape from the mesh model
 			Shape complexModel = (Shape)model;
+			
+			// Get the triangles
 			ArrayList<Triangle> triangles = complexModel.getTriangles();
+			
+			// Go through and add all triangles in the shape to the triangle mesh
 			int curPointIndex = 0;
 			for(Triangle tri: triangles) {
 				mesh.getPoints().addAll(
@@ -301,6 +308,7 @@ public class FXShapeView extends BasicView implements IWireframeView {
 				curPointIndex+=3;
 			}
 			
+			// Create the shape view from the mesh
 			shape = new MeshView(mesh);
 			
 			// If a material is not specified, create a new one

@@ -38,6 +38,9 @@ import org.eclipse.eavp.viz.modeling.properties.MeshType;
  */
 public class Shape extends BasicMesh {
 	
+	/**
+	 * Array of triangles used to represent this shape as a mesh
+	 */
 	@XmlTransient
 	protected ArrayList<Triangle> triangles;
 
