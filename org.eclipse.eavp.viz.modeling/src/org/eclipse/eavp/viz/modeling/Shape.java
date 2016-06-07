@@ -233,6 +233,7 @@ public class Shape extends BasicMesh {
 		// Copy the map of entities
 		entities = new HashMap<IMeshCategory, ArrayList<IController>>();
 
+		triangles = castObject.getTriangles();
 		// Copy each child in the entities map
 		List<IController> children = castObject.entities
 				.get(MeshCategory.CHILDREN);
