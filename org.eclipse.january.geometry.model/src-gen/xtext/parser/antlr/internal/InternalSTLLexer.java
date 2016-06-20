@@ -384,10 +384,10 @@ public class InternalSTLLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSTL.g:499:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalSTL.g:499:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalSTL.g:507:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalSTL.g:507:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalSTL.g:499:11: ( '^' )?
+            // InternalSTL.g:507:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -396,7 +396,7 @@ public class InternalSTLLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalSTL.g:499:11: '^'
+                    // InternalSTL.g:507:11: '^'
                     {
                     match('^'); 
 
@@ -414,7 +414,7 @@ public class InternalSTLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalSTL.g:499:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalSTL.g:507:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -463,10 +463,10 @@ public class InternalSTLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSTL.g:501:10: ( ( '0' .. '9' )+ )
-            // InternalSTL.g:501:12: ( '0' .. '9' )+
+            // InternalSTL.g:509:10: ( ( '0' .. '9' )+ )
+            // InternalSTL.g:509:12: ( '0' .. '9' )+
             {
-            // InternalSTL.g:501:12: ( '0' .. '9' )+
+            // InternalSTL.g:509:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -480,7 +480,7 @@ public class InternalSTLLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalSTL.g:501:13: '0' .. '9'
+            	    // InternalSTL.g:509:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -512,10 +512,10 @@ public class InternalSTLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSTL.g:503:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalSTL.g:503:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalSTL.g:511:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalSTL.g:511:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalSTL.g:503:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalSTL.g:511:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -533,10 +533,10 @@ public class InternalSTLLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalSTL.g:503:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalSTL.g:511:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalSTL.g:503:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalSTL.g:511:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -552,7 +552,7 @@ public class InternalSTLLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalSTL.g:503:21: '\\\\' .
+                    	    // InternalSTL.g:511:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -560,7 +560,7 @@ public class InternalSTLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalSTL.g:503:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalSTL.g:511:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -585,10 +585,10 @@ public class InternalSTLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalSTL.g:503:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalSTL.g:511:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalSTL.g:503:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalSTL.g:511:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -604,7 +604,7 @@ public class InternalSTLLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalSTL.g:503:54: '\\\\' .
+                    	    // InternalSTL.g:511:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -612,7 +612,7 @@ public class InternalSTLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalSTL.g:503:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalSTL.g:511:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -655,12 +655,12 @@ public class InternalSTLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSTL.g:505:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalSTL.g:505:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalSTL.g:513:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalSTL.g:513:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalSTL.g:505:24: ( options {greedy=false; } : . )*
+            // InternalSTL.g:513:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -685,7 +685,7 @@ public class InternalSTLLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalSTL.g:505:52: .
+            	    // InternalSTL.g:513:52: .
             	    {
             	    matchAny(); 
 
@@ -715,12 +715,12 @@ public class InternalSTLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSTL.g:507:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalSTL.g:507:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalSTL.g:515:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalSTL.g:515:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalSTL.g:507:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalSTL.g:515:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -733,7 +733,7 @@ public class InternalSTLLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalSTL.g:507:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalSTL.g:515:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -753,7 +753,7 @@ public class InternalSTLLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalSTL.g:507:40: ( ( '\\r' )? '\\n' )?
+            // InternalSTL.g:515:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -762,9 +762,9 @@ public class InternalSTLLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalSTL.g:507:41: ( '\\r' )? '\\n'
+                    // InternalSTL.g:515:41: ( '\\r' )? '\\n'
                     {
-                    // InternalSTL.g:507:41: ( '\\r' )?
+                    // InternalSTL.g:515:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -773,7 +773,7 @@ public class InternalSTLLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalSTL.g:507:41: '\\r'
+                            // InternalSTL.g:515:41: '\\r'
                             {
                             match('\r'); 
 
@@ -805,10 +805,10 @@ public class InternalSTLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSTL.g:509:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalSTL.g:509:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalSTL.g:517:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalSTL.g:517:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalSTL.g:509:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalSTL.g:517:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -862,8 +862,8 @@ public class InternalSTLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSTL.g:511:16: ( . )
-            // InternalSTL.g:511:18: .
+            // InternalSTL.g:519:16: ( . )
+            // InternalSTL.g:519:18: .
             {
             matchAny(); 
 
