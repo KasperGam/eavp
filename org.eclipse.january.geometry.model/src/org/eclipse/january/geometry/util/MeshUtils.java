@@ -907,7 +907,7 @@ public class MeshUtils {
 		matrix[0][1] = x * y * inverseCos - z * sin;
 		matrix[0][2] = x * z * inverseCos + y * sin;
 		matrix[1][0] = y * x + inverseCos + z * sin;
-		matrix[1]
+//		matrix[1]
 
 		// Apply the rotation matrix to each vector of three coordinates
 		for (int i = 0; i < points.length / 3; i++) {

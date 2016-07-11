@@ -376,7 +376,7 @@ public class GeometryItemProviderAdapterFactory extends GeometryAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ASCIISTLGeometryImporterItemProvider asciistlGeometryImporterItemProvider;
+	protected STLGeometryImporterItemProvider asciistlGeometryImporterItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link org.eclipse.january.geometry.STLGeometryImporter}.
@@ -385,9 +385,9 @@ public class GeometryItemProviderAdapterFactory extends GeometryAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public Adapter createASCIISTLGeometryImporterAdapter() {
+	public Adapter createSTLGeometryImporterAdapter() {
 		if (asciistlGeometryImporterItemProvider == null) {
-			asciistlGeometryImporterItemProvider = new ASCIISTLGeometryImporterItemProvider(this);
+			asciistlGeometryImporterItemProvider = new STLGeometryImporterItemProvider(this);
 		}
 
 		return asciistlGeometryImporterItemProvider;
