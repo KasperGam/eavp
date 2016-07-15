@@ -6,9 +6,10 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 
 Model:
+	{Model}
 	'solid' (name = ID)?
 	(triangles+=Triangle)*
-	'endsolid' ID
+	'endsolid' ID?
 ;
 
 Triangle:
@@ -39,5 +40,5 @@ Vertex:
 ;
 
 terminal DOUBLE returns ecore::EDouble:
-	('-')? ('0'..'9')* ('.') ('0'..'9')* (('e' | 'E') ('-' | '+')? ('0'..'9')*)?
+	('-')? ('0'..'9')* (('.') ('0'..'9')* (('e' | 'E') ('-' | '+')? ('0'..'9')*)?)?
 ;

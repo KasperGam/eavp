@@ -358,11 +358,11 @@ public class ActionImportSTL extends Action {
 	private Model loadSTLFile(String filePath) {
 
 		// Create the stl standalone injector, get the resources and pull out
-		// the EMF model from the file
+		// the EMF model from the file 
 		Injector injector = new STLStandaloneSetup().createInjectorAndDoEMFRegistration();
 		XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
 		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
-		Resource resource = resourceSet.getResource(URI.createURI("file:" + filePath), true);
+		Resource resource = resourceSet.getResource(URI.createFileURI(filePath), true);
 
 		// Get the model. If there is no model, then we will try to load as
 		// binary and return this model as null.

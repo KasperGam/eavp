@@ -118,32 +118,43 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModel"
-    // InternalSTL.g:71:1: ruleModel returns [EObject current=null] : (otherlv_0= 'solid' ( (lv_name_1_0= RULE_ID ) )? ( (lv_triangles_2_0= ruleTriangle ) )* otherlv_3= 'endsolid' this_ID_4= RULE_ID ) ;
+    // InternalSTL.g:71:1: ruleModel returns [EObject current=null] : ( () otherlv_1= 'solid' ( (lv_name_2_0= RULE_ID ) )? ( (lv_triangles_3_0= ruleTriangle ) )* otherlv_4= 'endsolid' (this_ID_5= RULE_ID )? ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token lv_name_1_0=null;
-        Token otherlv_3=null;
-        Token this_ID_4=null;
-        EObject lv_triangles_2_0 = null;
+        Token otherlv_1=null;
+        Token lv_name_2_0=null;
+        Token otherlv_4=null;
+        Token this_ID_5=null;
+        EObject lv_triangles_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalSTL.g:77:2: ( (otherlv_0= 'solid' ( (lv_name_1_0= RULE_ID ) )? ( (lv_triangles_2_0= ruleTriangle ) )* otherlv_3= 'endsolid' this_ID_4= RULE_ID ) )
-            // InternalSTL.g:78:2: (otherlv_0= 'solid' ( (lv_name_1_0= RULE_ID ) )? ( (lv_triangles_2_0= ruleTriangle ) )* otherlv_3= 'endsolid' this_ID_4= RULE_ID )
+            // InternalSTL.g:77:2: ( ( () otherlv_1= 'solid' ( (lv_name_2_0= RULE_ID ) )? ( (lv_triangles_3_0= ruleTriangle ) )* otherlv_4= 'endsolid' (this_ID_5= RULE_ID )? ) )
+            // InternalSTL.g:78:2: ( () otherlv_1= 'solid' ( (lv_name_2_0= RULE_ID ) )? ( (lv_triangles_3_0= ruleTriangle ) )* otherlv_4= 'endsolid' (this_ID_5= RULE_ID )? )
             {
-            // InternalSTL.g:78:2: (otherlv_0= 'solid' ( (lv_name_1_0= RULE_ID ) )? ( (lv_triangles_2_0= ruleTriangle ) )* otherlv_3= 'endsolid' this_ID_4= RULE_ID )
-            // InternalSTL.g:79:3: otherlv_0= 'solid' ( (lv_name_1_0= RULE_ID ) )? ( (lv_triangles_2_0= ruleTriangle ) )* otherlv_3= 'endsolid' this_ID_4= RULE_ID
+            // InternalSTL.g:78:2: ( () otherlv_1= 'solid' ( (lv_name_2_0= RULE_ID ) )? ( (lv_triangles_3_0= ruleTriangle ) )* otherlv_4= 'endsolid' (this_ID_5= RULE_ID )? )
+            // InternalSTL.g:79:3: () otherlv_1= 'solid' ( (lv_name_2_0= RULE_ID ) )? ( (lv_triangles_3_0= ruleTriangle ) )* otherlv_4= 'endsolid' (this_ID_5= RULE_ID )?
             {
-            otherlv_0=(Token)match(input,12,FOLLOW_3); 
+            // InternalSTL.g:79:3: ()
+            // InternalSTL.g:80:4: 
+            {
 
-            			newLeafNode(otherlv_0, grammarAccess.getModelAccess().getSolidKeyword_0());
+            				current = forceCreateModelElement(
+            					grammarAccess.getModelAccess().getModelAction_0(),
+            					current);
+            			
+
+            }
+
+            otherlv_1=(Token)match(input,12,FOLLOW_3); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getModelAccess().getSolidKeyword_1());
             		
-            // InternalSTL.g:83:3: ( (lv_name_1_0= RULE_ID ) )?
+            // InternalSTL.g:90:3: ( (lv_name_2_0= RULE_ID ) )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -152,14 +163,14 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalSTL.g:84:4: (lv_name_1_0= RULE_ID )
+                    // InternalSTL.g:91:4: (lv_name_2_0= RULE_ID )
                     {
-                    // InternalSTL.g:84:4: (lv_name_1_0= RULE_ID )
-                    // InternalSTL.g:85:5: lv_name_1_0= RULE_ID
+                    // InternalSTL.g:91:4: (lv_name_2_0= RULE_ID )
+                    // InternalSTL.g:92:5: lv_name_2_0= RULE_ID
                     {
-                    lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_4); 
+                    lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_4); 
 
-                    					newLeafNode(lv_name_1_0, grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_0());
+                    					newLeafNode(lv_name_2_0, grammarAccess.getModelAccess().getNameIDTerminalRuleCall_2_0());
                     				
 
                     					if (current==null) {
@@ -168,7 +179,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
                     					setWithLastConsumed(
                     						current,
                     						"name",
-                    						lv_name_1_0,
+                    						lv_name_2_0,
                     						"org.eclipse.xtext.common.Terminals.ID");
                     				
 
@@ -180,7 +191,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSTL.g:101:3: ( (lv_triangles_2_0= ruleTriangle ) )*
+            // InternalSTL.g:108:3: ( (lv_triangles_3_0= ruleTriangle ) )*
             loop2:
             do {
                 int alt2=2;
@@ -193,16 +204,16 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalSTL.g:102:4: (lv_triangles_2_0= ruleTriangle )
+            	    // InternalSTL.g:109:4: (lv_triangles_3_0= ruleTriangle )
             	    {
-            	    // InternalSTL.g:102:4: (lv_triangles_2_0= ruleTriangle )
-            	    // InternalSTL.g:103:5: lv_triangles_2_0= ruleTriangle
+            	    // InternalSTL.g:109:4: (lv_triangles_3_0= ruleTriangle )
+            	    // InternalSTL.g:110:5: lv_triangles_3_0= ruleTriangle
             	    {
 
-            	    					newCompositeNode(grammarAccess.getModelAccess().getTrianglesTriangleParserRuleCall_2_0());
+            	    					newCompositeNode(grammarAccess.getModelAccess().getTrianglesTriangleParserRuleCall_3_0());
             	    				
             	    pushFollow(FOLLOW_4);
-            	    lv_triangles_2_0=ruleTriangle();
+            	    lv_triangles_3_0=ruleTriangle();
 
             	    state._fsp--;
 
@@ -213,7 +224,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
             	    					add(
             	    						current,
             	    						"triangles",
-            	    						lv_triangles_2_0,
+            	    						lv_triangles_3_0,
             	    						"org.eclipse.eavp.STL.Triangle");
             	    					afterParserOrEnumRuleCall();
             	    				
@@ -229,14 +240,31 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_3=(Token)match(input,13,FOLLOW_5); 
+            otherlv_4=(Token)match(input,13,FOLLOW_5); 
 
-            			newLeafNode(otherlv_3, grammarAccess.getModelAccess().getEndsolidKeyword_3());
+            			newLeafNode(otherlv_4, grammarAccess.getModelAccess().getEndsolidKeyword_4());
             		
-            this_ID_4=(Token)match(input,RULE_ID,FOLLOW_2); 
+            // InternalSTL.g:131:3: (this_ID_5= RULE_ID )?
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            			newLeafNode(this_ID_4, grammarAccess.getModelAccess().getIDTerminalRuleCall_4());
-            		
+            if ( (LA3_0==RULE_ID) ) {
+                alt3=1;
+            }
+            switch (alt3) {
+                case 1 :
+                    // InternalSTL.g:132:4: this_ID_5= RULE_ID
+                    {
+                    this_ID_5=(Token)match(input,RULE_ID,FOLLOW_2); 
+
+                    				newLeafNode(this_ID_5, grammarAccess.getModelAccess().getIDTerminalRuleCall_5());
+                    			
+
+                    }
+                    break;
+
+            }
+
 
             }
 
@@ -260,7 +288,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTriangle"
-    // InternalSTL.g:132:1: entryRuleTriangle returns [EObject current=null] : iv_ruleTriangle= ruleTriangle EOF ;
+    // InternalSTL.g:141:1: entryRuleTriangle returns [EObject current=null] : iv_ruleTriangle= ruleTriangle EOF ;
     public final EObject entryRuleTriangle() throws RecognitionException {
         EObject current = null;
 
@@ -268,8 +296,8 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSTL.g:132:49: (iv_ruleTriangle= ruleTriangle EOF )
-            // InternalSTL.g:133:2: iv_ruleTriangle= ruleTriangle EOF
+            // InternalSTL.g:141:49: (iv_ruleTriangle= ruleTriangle EOF )
+            // InternalSTL.g:142:2: iv_ruleTriangle= ruleTriangle EOF
             {
              newCompositeNode(grammarAccess.getTriangleRule()); 
             pushFollow(FOLLOW_1);
@@ -296,7 +324,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTriangle"
-    // InternalSTL.g:139:1: ruleTriangle returns [EObject current=null] : (otherlv_0= 'facet' ( (lv_normal_1_0= ruleNormal ) ) ( (lv_verticies_2_0= ruleVerticies ) ) otherlv_3= 'endfacet' ) ;
+    // InternalSTL.g:148:1: ruleTriangle returns [EObject current=null] : (otherlv_0= 'facet' ( (lv_normal_1_0= ruleNormal ) ) ( (lv_verticies_2_0= ruleVerticies ) ) otherlv_3= 'endfacet' ) ;
     public final EObject ruleTriangle() throws RecognitionException {
         EObject current = null;
 
@@ -311,21 +339,21 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSTL.g:145:2: ( (otherlv_0= 'facet' ( (lv_normal_1_0= ruleNormal ) ) ( (lv_verticies_2_0= ruleVerticies ) ) otherlv_3= 'endfacet' ) )
-            // InternalSTL.g:146:2: (otherlv_0= 'facet' ( (lv_normal_1_0= ruleNormal ) ) ( (lv_verticies_2_0= ruleVerticies ) ) otherlv_3= 'endfacet' )
+            // InternalSTL.g:154:2: ( (otherlv_0= 'facet' ( (lv_normal_1_0= ruleNormal ) ) ( (lv_verticies_2_0= ruleVerticies ) ) otherlv_3= 'endfacet' ) )
+            // InternalSTL.g:155:2: (otherlv_0= 'facet' ( (lv_normal_1_0= ruleNormal ) ) ( (lv_verticies_2_0= ruleVerticies ) ) otherlv_3= 'endfacet' )
             {
-            // InternalSTL.g:146:2: (otherlv_0= 'facet' ( (lv_normal_1_0= ruleNormal ) ) ( (lv_verticies_2_0= ruleVerticies ) ) otherlv_3= 'endfacet' )
-            // InternalSTL.g:147:3: otherlv_0= 'facet' ( (lv_normal_1_0= ruleNormal ) ) ( (lv_verticies_2_0= ruleVerticies ) ) otherlv_3= 'endfacet'
+            // InternalSTL.g:155:2: (otherlv_0= 'facet' ( (lv_normal_1_0= ruleNormal ) ) ( (lv_verticies_2_0= ruleVerticies ) ) otherlv_3= 'endfacet' )
+            // InternalSTL.g:156:3: otherlv_0= 'facet' ( (lv_normal_1_0= ruleNormal ) ) ( (lv_verticies_2_0= ruleVerticies ) ) otherlv_3= 'endfacet'
             {
             otherlv_0=(Token)match(input,14,FOLLOW_6); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTriangleAccess().getFacetKeyword_0());
             		
-            // InternalSTL.g:151:3: ( (lv_normal_1_0= ruleNormal ) )
-            // InternalSTL.g:152:4: (lv_normal_1_0= ruleNormal )
+            // InternalSTL.g:160:3: ( (lv_normal_1_0= ruleNormal ) )
+            // InternalSTL.g:161:4: (lv_normal_1_0= ruleNormal )
             {
-            // InternalSTL.g:152:4: (lv_normal_1_0= ruleNormal )
-            // InternalSTL.g:153:5: lv_normal_1_0= ruleNormal
+            // InternalSTL.g:161:4: (lv_normal_1_0= ruleNormal )
+            // InternalSTL.g:162:5: lv_normal_1_0= ruleNormal
             {
 
             					newCompositeNode(grammarAccess.getTriangleAccess().getNormalNormalParserRuleCall_1_0());
@@ -352,11 +380,11 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSTL.g:170:3: ( (lv_verticies_2_0= ruleVerticies ) )
-            // InternalSTL.g:171:4: (lv_verticies_2_0= ruleVerticies )
+            // InternalSTL.g:179:3: ( (lv_verticies_2_0= ruleVerticies ) )
+            // InternalSTL.g:180:4: (lv_verticies_2_0= ruleVerticies )
             {
-            // InternalSTL.g:171:4: (lv_verticies_2_0= ruleVerticies )
-            // InternalSTL.g:172:5: lv_verticies_2_0= ruleVerticies
+            // InternalSTL.g:180:4: (lv_verticies_2_0= ruleVerticies )
+            // InternalSTL.g:181:5: lv_verticies_2_0= ruleVerticies
             {
 
             					newCompositeNode(grammarAccess.getTriangleAccess().getVerticiesVerticiesParserRuleCall_2_0());
@@ -410,7 +438,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNormal"
-    // InternalSTL.g:197:1: entryRuleNormal returns [EObject current=null] : iv_ruleNormal= ruleNormal EOF ;
+    // InternalSTL.g:206:1: entryRuleNormal returns [EObject current=null] : iv_ruleNormal= ruleNormal EOF ;
     public final EObject entryRuleNormal() throws RecognitionException {
         EObject current = null;
 
@@ -418,8 +446,8 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSTL.g:197:47: (iv_ruleNormal= ruleNormal EOF )
-            // InternalSTL.g:198:2: iv_ruleNormal= ruleNormal EOF
+            // InternalSTL.g:206:47: (iv_ruleNormal= ruleNormal EOF )
+            // InternalSTL.g:207:2: iv_ruleNormal= ruleNormal EOF
             {
              newCompositeNode(grammarAccess.getNormalRule()); 
             pushFollow(FOLLOW_1);
@@ -446,7 +474,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNormal"
-    // InternalSTL.g:204:1: ruleNormal returns [EObject current=null] : (otherlv_0= 'normal' ( (lv_vector_1_0= ruleVector ) ) ) ;
+    // InternalSTL.g:213:1: ruleNormal returns [EObject current=null] : (otherlv_0= 'normal' ( (lv_vector_1_0= ruleVector ) ) ) ;
     public final EObject ruleNormal() throws RecognitionException {
         EObject current = null;
 
@@ -458,21 +486,21 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSTL.g:210:2: ( (otherlv_0= 'normal' ( (lv_vector_1_0= ruleVector ) ) ) )
-            // InternalSTL.g:211:2: (otherlv_0= 'normal' ( (lv_vector_1_0= ruleVector ) ) )
+            // InternalSTL.g:219:2: ( (otherlv_0= 'normal' ( (lv_vector_1_0= ruleVector ) ) ) )
+            // InternalSTL.g:220:2: (otherlv_0= 'normal' ( (lv_vector_1_0= ruleVector ) ) )
             {
-            // InternalSTL.g:211:2: (otherlv_0= 'normal' ( (lv_vector_1_0= ruleVector ) ) )
-            // InternalSTL.g:212:3: otherlv_0= 'normal' ( (lv_vector_1_0= ruleVector ) )
+            // InternalSTL.g:220:2: (otherlv_0= 'normal' ( (lv_vector_1_0= ruleVector ) ) )
+            // InternalSTL.g:221:3: otherlv_0= 'normal' ( (lv_vector_1_0= ruleVector ) )
             {
             otherlv_0=(Token)match(input,16,FOLLOW_9); 
 
             			newLeafNode(otherlv_0, grammarAccess.getNormalAccess().getNormalKeyword_0());
             		
-            // InternalSTL.g:216:3: ( (lv_vector_1_0= ruleVector ) )
-            // InternalSTL.g:217:4: (lv_vector_1_0= ruleVector )
+            // InternalSTL.g:225:3: ( (lv_vector_1_0= ruleVector ) )
+            // InternalSTL.g:226:4: (lv_vector_1_0= ruleVector )
             {
-            // InternalSTL.g:217:4: (lv_vector_1_0= ruleVector )
-            // InternalSTL.g:218:5: lv_vector_1_0= ruleVector
+            // InternalSTL.g:226:4: (lv_vector_1_0= ruleVector )
+            // InternalSTL.g:227:5: lv_vector_1_0= ruleVector
             {
 
             					newCompositeNode(grammarAccess.getNormalAccess().getVectorVectorParserRuleCall_1_0());
@@ -522,7 +550,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVector"
-    // InternalSTL.g:239:1: entryRuleVector returns [EObject current=null] : iv_ruleVector= ruleVector EOF ;
+    // InternalSTL.g:248:1: entryRuleVector returns [EObject current=null] : iv_ruleVector= ruleVector EOF ;
     public final EObject entryRuleVector() throws RecognitionException {
         EObject current = null;
 
@@ -530,8 +558,8 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSTL.g:239:47: (iv_ruleVector= ruleVector EOF )
-            // InternalSTL.g:240:2: iv_ruleVector= ruleVector EOF
+            // InternalSTL.g:248:47: (iv_ruleVector= ruleVector EOF )
+            // InternalSTL.g:249:2: iv_ruleVector= ruleVector EOF
             {
              newCompositeNode(grammarAccess.getVectorRule()); 
             pushFollow(FOLLOW_1);
@@ -558,7 +586,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVector"
-    // InternalSTL.g:246:1: ruleVector returns [EObject current=null] : ( ( (lv_x_0_0= RULE_DOUBLE ) ) ( (lv_y_1_0= RULE_DOUBLE ) ) ( (lv_z_2_0= RULE_DOUBLE ) ) ) ;
+    // InternalSTL.g:255:1: ruleVector returns [EObject current=null] : ( ( (lv_x_0_0= RULE_DOUBLE ) ) ( (lv_y_1_0= RULE_DOUBLE ) ) ( (lv_z_2_0= RULE_DOUBLE ) ) ) ;
     public final EObject ruleVector() throws RecognitionException {
         EObject current = null;
 
@@ -570,17 +598,17 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSTL.g:252:2: ( ( ( (lv_x_0_0= RULE_DOUBLE ) ) ( (lv_y_1_0= RULE_DOUBLE ) ) ( (lv_z_2_0= RULE_DOUBLE ) ) ) )
-            // InternalSTL.g:253:2: ( ( (lv_x_0_0= RULE_DOUBLE ) ) ( (lv_y_1_0= RULE_DOUBLE ) ) ( (lv_z_2_0= RULE_DOUBLE ) ) )
+            // InternalSTL.g:261:2: ( ( ( (lv_x_0_0= RULE_DOUBLE ) ) ( (lv_y_1_0= RULE_DOUBLE ) ) ( (lv_z_2_0= RULE_DOUBLE ) ) ) )
+            // InternalSTL.g:262:2: ( ( (lv_x_0_0= RULE_DOUBLE ) ) ( (lv_y_1_0= RULE_DOUBLE ) ) ( (lv_z_2_0= RULE_DOUBLE ) ) )
             {
-            // InternalSTL.g:253:2: ( ( (lv_x_0_0= RULE_DOUBLE ) ) ( (lv_y_1_0= RULE_DOUBLE ) ) ( (lv_z_2_0= RULE_DOUBLE ) ) )
-            // InternalSTL.g:254:3: ( (lv_x_0_0= RULE_DOUBLE ) ) ( (lv_y_1_0= RULE_DOUBLE ) ) ( (lv_z_2_0= RULE_DOUBLE ) )
+            // InternalSTL.g:262:2: ( ( (lv_x_0_0= RULE_DOUBLE ) ) ( (lv_y_1_0= RULE_DOUBLE ) ) ( (lv_z_2_0= RULE_DOUBLE ) ) )
+            // InternalSTL.g:263:3: ( (lv_x_0_0= RULE_DOUBLE ) ) ( (lv_y_1_0= RULE_DOUBLE ) ) ( (lv_z_2_0= RULE_DOUBLE ) )
             {
-            // InternalSTL.g:254:3: ( (lv_x_0_0= RULE_DOUBLE ) )
-            // InternalSTL.g:255:4: (lv_x_0_0= RULE_DOUBLE )
+            // InternalSTL.g:263:3: ( (lv_x_0_0= RULE_DOUBLE ) )
+            // InternalSTL.g:264:4: (lv_x_0_0= RULE_DOUBLE )
             {
-            // InternalSTL.g:255:4: (lv_x_0_0= RULE_DOUBLE )
-            // InternalSTL.g:256:5: lv_x_0_0= RULE_DOUBLE
+            // InternalSTL.g:264:4: (lv_x_0_0= RULE_DOUBLE )
+            // InternalSTL.g:265:5: lv_x_0_0= RULE_DOUBLE
             {
             lv_x_0_0=(Token)match(input,RULE_DOUBLE,FOLLOW_9); 
 
@@ -602,11 +630,11 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSTL.g:272:3: ( (lv_y_1_0= RULE_DOUBLE ) )
-            // InternalSTL.g:273:4: (lv_y_1_0= RULE_DOUBLE )
+            // InternalSTL.g:281:3: ( (lv_y_1_0= RULE_DOUBLE ) )
+            // InternalSTL.g:282:4: (lv_y_1_0= RULE_DOUBLE )
             {
-            // InternalSTL.g:273:4: (lv_y_1_0= RULE_DOUBLE )
-            // InternalSTL.g:274:5: lv_y_1_0= RULE_DOUBLE
+            // InternalSTL.g:282:4: (lv_y_1_0= RULE_DOUBLE )
+            // InternalSTL.g:283:5: lv_y_1_0= RULE_DOUBLE
             {
             lv_y_1_0=(Token)match(input,RULE_DOUBLE,FOLLOW_9); 
 
@@ -628,11 +656,11 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSTL.g:290:3: ( (lv_z_2_0= RULE_DOUBLE ) )
-            // InternalSTL.g:291:4: (lv_z_2_0= RULE_DOUBLE )
+            // InternalSTL.g:299:3: ( (lv_z_2_0= RULE_DOUBLE ) )
+            // InternalSTL.g:300:4: (lv_z_2_0= RULE_DOUBLE )
             {
-            // InternalSTL.g:291:4: (lv_z_2_0= RULE_DOUBLE )
-            // InternalSTL.g:292:5: lv_z_2_0= RULE_DOUBLE
+            // InternalSTL.g:300:4: (lv_z_2_0= RULE_DOUBLE )
+            // InternalSTL.g:301:5: lv_z_2_0= RULE_DOUBLE
             {
             lv_z_2_0=(Token)match(input,RULE_DOUBLE,FOLLOW_2); 
 
@@ -677,7 +705,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVerticies"
-    // InternalSTL.g:312:1: entryRuleVerticies returns [EObject current=null] : iv_ruleVerticies= ruleVerticies EOF ;
+    // InternalSTL.g:321:1: entryRuleVerticies returns [EObject current=null] : iv_ruleVerticies= ruleVerticies EOF ;
     public final EObject entryRuleVerticies() throws RecognitionException {
         EObject current = null;
 
@@ -685,8 +713,8 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSTL.g:312:50: (iv_ruleVerticies= ruleVerticies EOF )
-            // InternalSTL.g:313:2: iv_ruleVerticies= ruleVerticies EOF
+            // InternalSTL.g:321:50: (iv_ruleVerticies= ruleVerticies EOF )
+            // InternalSTL.g:322:2: iv_ruleVerticies= ruleVerticies EOF
             {
              newCompositeNode(grammarAccess.getVerticiesRule()); 
             pushFollow(FOLLOW_1);
@@ -713,7 +741,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVerticies"
-    // InternalSTL.g:319:1: ruleVerticies returns [EObject current=null] : (otherlv_0= 'outer' otherlv_1= 'loop' ( (lv_v1_2_0= ruleVertex ) ) ( (lv_v2_3_0= ruleVertex ) ) ( (lv_v3_4_0= ruleVertex ) ) otherlv_5= 'endloop' ) ;
+    // InternalSTL.g:328:1: ruleVerticies returns [EObject current=null] : (otherlv_0= 'outer' otherlv_1= 'loop' ( (lv_v1_2_0= ruleVertex ) ) ( (lv_v2_3_0= ruleVertex ) ) ( (lv_v3_4_0= ruleVertex ) ) otherlv_5= 'endloop' ) ;
     public final EObject ruleVerticies() throws RecognitionException {
         EObject current = null;
 
@@ -731,11 +759,11 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSTL.g:325:2: ( (otherlv_0= 'outer' otherlv_1= 'loop' ( (lv_v1_2_0= ruleVertex ) ) ( (lv_v2_3_0= ruleVertex ) ) ( (lv_v3_4_0= ruleVertex ) ) otherlv_5= 'endloop' ) )
-            // InternalSTL.g:326:2: (otherlv_0= 'outer' otherlv_1= 'loop' ( (lv_v1_2_0= ruleVertex ) ) ( (lv_v2_3_0= ruleVertex ) ) ( (lv_v3_4_0= ruleVertex ) ) otherlv_5= 'endloop' )
+            // InternalSTL.g:334:2: ( (otherlv_0= 'outer' otherlv_1= 'loop' ( (lv_v1_2_0= ruleVertex ) ) ( (lv_v2_3_0= ruleVertex ) ) ( (lv_v3_4_0= ruleVertex ) ) otherlv_5= 'endloop' ) )
+            // InternalSTL.g:335:2: (otherlv_0= 'outer' otherlv_1= 'loop' ( (lv_v1_2_0= ruleVertex ) ) ( (lv_v2_3_0= ruleVertex ) ) ( (lv_v3_4_0= ruleVertex ) ) otherlv_5= 'endloop' )
             {
-            // InternalSTL.g:326:2: (otherlv_0= 'outer' otherlv_1= 'loop' ( (lv_v1_2_0= ruleVertex ) ) ( (lv_v2_3_0= ruleVertex ) ) ( (lv_v3_4_0= ruleVertex ) ) otherlv_5= 'endloop' )
-            // InternalSTL.g:327:3: otherlv_0= 'outer' otherlv_1= 'loop' ( (lv_v1_2_0= ruleVertex ) ) ( (lv_v2_3_0= ruleVertex ) ) ( (lv_v3_4_0= ruleVertex ) ) otherlv_5= 'endloop'
+            // InternalSTL.g:335:2: (otherlv_0= 'outer' otherlv_1= 'loop' ( (lv_v1_2_0= ruleVertex ) ) ( (lv_v2_3_0= ruleVertex ) ) ( (lv_v3_4_0= ruleVertex ) ) otherlv_5= 'endloop' )
+            // InternalSTL.g:336:3: otherlv_0= 'outer' otherlv_1= 'loop' ( (lv_v1_2_0= ruleVertex ) ) ( (lv_v2_3_0= ruleVertex ) ) ( (lv_v3_4_0= ruleVertex ) ) otherlv_5= 'endloop'
             {
             otherlv_0=(Token)match(input,17,FOLLOW_10); 
 
@@ -745,11 +773,11 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getVerticiesAccess().getLoopKeyword_1());
             		
-            // InternalSTL.g:335:3: ( (lv_v1_2_0= ruleVertex ) )
-            // InternalSTL.g:336:4: (lv_v1_2_0= ruleVertex )
+            // InternalSTL.g:344:3: ( (lv_v1_2_0= ruleVertex ) )
+            // InternalSTL.g:345:4: (lv_v1_2_0= ruleVertex )
             {
-            // InternalSTL.g:336:4: (lv_v1_2_0= ruleVertex )
-            // InternalSTL.g:337:5: lv_v1_2_0= ruleVertex
+            // InternalSTL.g:345:4: (lv_v1_2_0= ruleVertex )
+            // InternalSTL.g:346:5: lv_v1_2_0= ruleVertex
             {
 
             					newCompositeNode(grammarAccess.getVerticiesAccess().getV1VertexParserRuleCall_2_0());
@@ -776,11 +804,11 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSTL.g:354:3: ( (lv_v2_3_0= ruleVertex ) )
-            // InternalSTL.g:355:4: (lv_v2_3_0= ruleVertex )
+            // InternalSTL.g:363:3: ( (lv_v2_3_0= ruleVertex ) )
+            // InternalSTL.g:364:4: (lv_v2_3_0= ruleVertex )
             {
-            // InternalSTL.g:355:4: (lv_v2_3_0= ruleVertex )
-            // InternalSTL.g:356:5: lv_v2_3_0= ruleVertex
+            // InternalSTL.g:364:4: (lv_v2_3_0= ruleVertex )
+            // InternalSTL.g:365:5: lv_v2_3_0= ruleVertex
             {
 
             					newCompositeNode(grammarAccess.getVerticiesAccess().getV2VertexParserRuleCall_3_0());
@@ -807,11 +835,11 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSTL.g:373:3: ( (lv_v3_4_0= ruleVertex ) )
-            // InternalSTL.g:374:4: (lv_v3_4_0= ruleVertex )
+            // InternalSTL.g:382:3: ( (lv_v3_4_0= ruleVertex ) )
+            // InternalSTL.g:383:4: (lv_v3_4_0= ruleVertex )
             {
-            // InternalSTL.g:374:4: (lv_v3_4_0= ruleVertex )
-            // InternalSTL.g:375:5: lv_v3_4_0= ruleVertex
+            // InternalSTL.g:383:4: (lv_v3_4_0= ruleVertex )
+            // InternalSTL.g:384:5: lv_v3_4_0= ruleVertex
             {
 
             					newCompositeNode(grammarAccess.getVerticiesAccess().getV3VertexParserRuleCall_4_0());
@@ -865,7 +893,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVertex"
-    // InternalSTL.g:400:1: entryRuleVertex returns [EObject current=null] : iv_ruleVertex= ruleVertex EOF ;
+    // InternalSTL.g:409:1: entryRuleVertex returns [EObject current=null] : iv_ruleVertex= ruleVertex EOF ;
     public final EObject entryRuleVertex() throws RecognitionException {
         EObject current = null;
 
@@ -873,8 +901,8 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSTL.g:400:47: (iv_ruleVertex= ruleVertex EOF )
-            // InternalSTL.g:401:2: iv_ruleVertex= ruleVertex EOF
+            // InternalSTL.g:409:47: (iv_ruleVertex= ruleVertex EOF )
+            // InternalSTL.g:410:2: iv_ruleVertex= ruleVertex EOF
             {
              newCompositeNode(grammarAccess.getVertexRule()); 
             pushFollow(FOLLOW_1);
@@ -901,7 +929,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVertex"
-    // InternalSTL.g:407:1: ruleVertex returns [EObject current=null] : (otherlv_0= 'vertex' ( (lv_x_1_0= RULE_DOUBLE ) ) ( (lv_y_2_0= RULE_DOUBLE ) ) ( (lv_z_3_0= RULE_DOUBLE ) ) ) ;
+    // InternalSTL.g:416:1: ruleVertex returns [EObject current=null] : (otherlv_0= 'vertex' ( (lv_x_1_0= RULE_DOUBLE ) ) ( (lv_y_2_0= RULE_DOUBLE ) ) ( (lv_z_3_0= RULE_DOUBLE ) ) ) ;
     public final EObject ruleVertex() throws RecognitionException {
         EObject current = null;
 
@@ -914,21 +942,21 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSTL.g:413:2: ( (otherlv_0= 'vertex' ( (lv_x_1_0= RULE_DOUBLE ) ) ( (lv_y_2_0= RULE_DOUBLE ) ) ( (lv_z_3_0= RULE_DOUBLE ) ) ) )
-            // InternalSTL.g:414:2: (otherlv_0= 'vertex' ( (lv_x_1_0= RULE_DOUBLE ) ) ( (lv_y_2_0= RULE_DOUBLE ) ) ( (lv_z_3_0= RULE_DOUBLE ) ) )
+            // InternalSTL.g:422:2: ( (otherlv_0= 'vertex' ( (lv_x_1_0= RULE_DOUBLE ) ) ( (lv_y_2_0= RULE_DOUBLE ) ) ( (lv_z_3_0= RULE_DOUBLE ) ) ) )
+            // InternalSTL.g:423:2: (otherlv_0= 'vertex' ( (lv_x_1_0= RULE_DOUBLE ) ) ( (lv_y_2_0= RULE_DOUBLE ) ) ( (lv_z_3_0= RULE_DOUBLE ) ) )
             {
-            // InternalSTL.g:414:2: (otherlv_0= 'vertex' ( (lv_x_1_0= RULE_DOUBLE ) ) ( (lv_y_2_0= RULE_DOUBLE ) ) ( (lv_z_3_0= RULE_DOUBLE ) ) )
-            // InternalSTL.g:415:3: otherlv_0= 'vertex' ( (lv_x_1_0= RULE_DOUBLE ) ) ( (lv_y_2_0= RULE_DOUBLE ) ) ( (lv_z_3_0= RULE_DOUBLE ) )
+            // InternalSTL.g:423:2: (otherlv_0= 'vertex' ( (lv_x_1_0= RULE_DOUBLE ) ) ( (lv_y_2_0= RULE_DOUBLE ) ) ( (lv_z_3_0= RULE_DOUBLE ) ) )
+            // InternalSTL.g:424:3: otherlv_0= 'vertex' ( (lv_x_1_0= RULE_DOUBLE ) ) ( (lv_y_2_0= RULE_DOUBLE ) ) ( (lv_z_3_0= RULE_DOUBLE ) )
             {
             otherlv_0=(Token)match(input,20,FOLLOW_9); 
 
             			newLeafNode(otherlv_0, grammarAccess.getVertexAccess().getVertexKeyword_0());
             		
-            // InternalSTL.g:419:3: ( (lv_x_1_0= RULE_DOUBLE ) )
-            // InternalSTL.g:420:4: (lv_x_1_0= RULE_DOUBLE )
+            // InternalSTL.g:428:3: ( (lv_x_1_0= RULE_DOUBLE ) )
+            // InternalSTL.g:429:4: (lv_x_1_0= RULE_DOUBLE )
             {
-            // InternalSTL.g:420:4: (lv_x_1_0= RULE_DOUBLE )
-            // InternalSTL.g:421:5: lv_x_1_0= RULE_DOUBLE
+            // InternalSTL.g:429:4: (lv_x_1_0= RULE_DOUBLE )
+            // InternalSTL.g:430:5: lv_x_1_0= RULE_DOUBLE
             {
             lv_x_1_0=(Token)match(input,RULE_DOUBLE,FOLLOW_9); 
 
@@ -950,11 +978,11 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSTL.g:437:3: ( (lv_y_2_0= RULE_DOUBLE ) )
-            // InternalSTL.g:438:4: (lv_y_2_0= RULE_DOUBLE )
+            // InternalSTL.g:446:3: ( (lv_y_2_0= RULE_DOUBLE ) )
+            // InternalSTL.g:447:4: (lv_y_2_0= RULE_DOUBLE )
             {
-            // InternalSTL.g:438:4: (lv_y_2_0= RULE_DOUBLE )
-            // InternalSTL.g:439:5: lv_y_2_0= RULE_DOUBLE
+            // InternalSTL.g:447:4: (lv_y_2_0= RULE_DOUBLE )
+            // InternalSTL.g:448:5: lv_y_2_0= RULE_DOUBLE
             {
             lv_y_2_0=(Token)match(input,RULE_DOUBLE,FOLLOW_9); 
 
@@ -976,11 +1004,11 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSTL.g:455:3: ( (lv_z_3_0= RULE_DOUBLE ) )
-            // InternalSTL.g:456:4: (lv_z_3_0= RULE_DOUBLE )
+            // InternalSTL.g:464:3: ( (lv_z_3_0= RULE_DOUBLE ) )
+            // InternalSTL.g:465:4: (lv_z_3_0= RULE_DOUBLE )
             {
-            // InternalSTL.g:456:4: (lv_z_3_0= RULE_DOUBLE )
-            // InternalSTL.g:457:5: lv_z_3_0= RULE_DOUBLE
+            // InternalSTL.g:465:4: (lv_z_3_0= RULE_DOUBLE )
+            // InternalSTL.g:466:5: lv_z_3_0= RULE_DOUBLE
             {
             lv_z_3_0=(Token)match(input,RULE_DOUBLE,FOLLOW_2); 
 
@@ -1032,7 +1060,7 @@ public class InternalSTLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000006010L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000006000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000012L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000010000L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000020000L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000008000L});
