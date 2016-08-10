@@ -30,6 +30,7 @@ public class IntersectionImpl extends OperatorImpl implements Intersection {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
